@@ -1,10 +1,10 @@
 {
   "name": "@upside-cloud/angular-spring-batch",
-  "version": "3.0.12",
+  "version": "3.1.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
-    "build": "ng build angular-spring-batch --prod",
+    "build": "ng build angular-spring-batch --configuration production",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

@@ -5,7 +5,7 @@
   "lib": {
     "entryFile": "src/public_api.ts"
   },
-  "whitelistedNonPeerDependencies": [
+  "allowedNonPeerDependencies": [
     "@fortawesome/angular-fontawesome",
     "@fortawesome/fontawesome-svg-core",
     "@fortawesome/free-solid-svg-icons",
