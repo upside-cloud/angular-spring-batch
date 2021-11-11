@@ -7,6 +7,6 @@
     <div class="text-secondary">{{job.description}}</div>
   </div>
 
-  <spring-batch-execution-form class="border-bottom mt-4 pb-3" [job]="job" (start)="onStart($event)"></spring-batch-execution-form>
+  <spring-batch-execution-form class="border-bottom mt-4 pb-3" [job]="job" (executionStarted)="onStart($event)"></spring-batch-execution-form>
   <spring-batch-executions class="mt-4" [job]="job" (stop)="onStop($event)"></spring-batch-executions>
 </div>

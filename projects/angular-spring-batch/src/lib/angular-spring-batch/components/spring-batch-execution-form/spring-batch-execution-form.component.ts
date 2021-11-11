@@ -1,10 +1,10 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { finalize } from 'rxjs/operators';
-import createAutoCorrectedDatePipe from 'text-mask-addons/dist/createAutoCorrectedDatePipe';
-import { SpringBatchExecutionParameter } from '../../models/spring-batch-execution-parameter.model';
-import { SpringBatchExecution } from '../../models/spring-batch-execution.model';
-import { SpringBatch } from '../../models/spring-batch.model';
-import { SpringBatchService } from '../../services/spring-batch.service';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {finalize} from 'rxjs/operators';
+import {createAutoCorrectedDatePipe} from 'text-mask-addons';
+import {SpringBatchExecutionParameter} from '../../models/spring-batch-execution-parameter.model';
+import {SpringBatchExecution} from '../../models/spring-batch-execution.model';
+import {SpringBatch} from '../../models/spring-batch.model';
+import {SpringBatchService} from '../../services/spring-batch.service';
 
 @Component({
   selector: 'spring-batch-execution-form',
@@ -25,7 +25,7 @@ export class SpringBatchExecutionFormComponent {
   loading = false;
 
   @Output()
-  start = new EventEmitter<SpringBatchExecution>();
+  executionStarted = new EventEmitter<SpringBatchExecution>();
 
   visible = false;
 
@@ -61,7 +61,7 @@ export class SpringBatchExecutionFormComponent {
     this.springBatchService.start(this.execution).pipe(
       finalize(() => this.loading = false))
       .subscribe((item) => {
-        this.start.emit(item);
+        this.executionStarted.emit(item);
       });
     this.clear();
   }

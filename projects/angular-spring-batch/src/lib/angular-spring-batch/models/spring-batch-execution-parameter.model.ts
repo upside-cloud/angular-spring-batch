@@ -40,7 +40,7 @@ export class SpringBatchExecutionParameter {
         this._inputValue = this.value;
         break;
       case 'BOOLEAN':
-        this.value = (value && (value === true || value === "true" || value === "1")) ;
+        this.value = (value && (value === true || value === 'true' || value === '1')) ;
         this._inputValue = this.value;
         break;
       case 'STRING':

@@ -1,25 +1,33 @@
 {
-  "name": "angular-spring-batch",
-  "description": "Composant permettant la gestion des jobs pour Angular 5+",
-  "version": "3.0.0",
+  "name": "@upside-cloud/angular-spring-batch",
+  "description": "Component allowing the management of jobs for Angular. Upgraded to Angular 12.",
+  "version": "3.0.12",
   "license": "Apache-2.0",
   "author": {
     "name": "Nicolas Raynaud",
     "email": "nicoraynaud@github.com",
     "url": "https://github.com/nicoraynaud"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/upside-cloud/angular-spring-batch"
+  },
+  "bugs": {
+    "url": "https://github.com/upside-cloud/angular-spring-batch/issues"
+  },
+  "homepage": "https://github.com/upside-cloud/angular-spring-batch#readme",
   "dependencies": {
     "@fortawesome/angular-fontawesome": "^0.9.0",
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "class-transformer": "^0.4.0",
-    "moment-mini": "^2.19.4",
+    "moment-mini": "^2.24.0",
     "angular2-text-mask": "^9.0.0",
-    "text-mask-addons": "^3.7.2"
+    "text-mask-addons": "^3.8.0"
   },
   "peerDependencies": {
-    "@angular/common": "12.0.5",
-    "@angular/core": "12.0.5",
-    "bootstrap": "^4.6.0"
+    "@angular/common": "^12.2.13",
+    "@angular/core": "^12.2.13",
+    "bootstrap": "~4.5.3"
   }
 }

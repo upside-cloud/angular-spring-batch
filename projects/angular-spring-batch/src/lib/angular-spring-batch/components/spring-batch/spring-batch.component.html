@@ -20,7 +20,7 @@
 
 <div class="container-fluid d-flex flex-column h-100">
   <div class="border bg-light h-100 mt-4 row">
-    <spring-batch-list class="col-3 p-0 h-100" (select)="onSelect($event)"></spring-batch-list>
+    <spring-batch-list class="col-3 p-0 h-100" (jobSelected)="onSelect($event)"></spring-batch-list>
     <spring-batch-details class="col-9 p-0 h-100" (executionChange)="onExecutionChange($event)" [job]="job"></spring-batch-details>
   </div>
 </div>

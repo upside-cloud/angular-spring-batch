@@ -17,7 +17,7 @@ export class SpringBatchListComponent implements OnInit {
   selected: SpringBatch;
 
   @Output()
-  select = new EventEmitter<SpringBatch>();
+  jobSelected = new EventEmitter<SpringBatch>();
 
   constructor(private jobsService: SpringBatchService) {
   }
@@ -32,7 +32,7 @@ export class SpringBatchListComponent implements OnInit {
       return;
     }
     this.selected = job;
-    this.select.emit(job);
+    this.jobSelected.emit(job);
   }
 
   refreshAllJob(chargeDetail: boolean, query?: string) {

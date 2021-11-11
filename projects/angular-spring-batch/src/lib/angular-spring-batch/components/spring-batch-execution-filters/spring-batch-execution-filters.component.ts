@@ -1,8 +1,8 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import createAutoCorrectedDatePipe from 'text-mask-addons/dist/createAutoCorrectedDatePipe';
-import { moment } from '../../misc/spring-batch-moment';
-import { SpringBatchExecutionFilters } from '../../models/spring-batch-execution-filters.model';
-import { SpringBatchExecutionStatus } from '../../models/spring-batch-execution-status.model';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {createAutoCorrectedDatePipe} from 'text-mask-addons';
+import {moment} from '../../misc/spring-batch-moment';
+import {SpringBatchExecutionFilters} from '../../models/spring-batch-execution-filters.model';
+import {SpringBatchExecutionStatus} from '../../models/spring-batch-execution-status.model';
 
 @Component({
   selector: 'spring-batch-execution-filters',
