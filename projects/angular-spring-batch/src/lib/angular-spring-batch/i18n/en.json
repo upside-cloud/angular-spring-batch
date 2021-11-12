@@ -1,0 +1,8 @@
+{
+  "angularSpringBatch": {
+    "main": {
+      "jobs": "Jobs",
+      "currentSearchPlaceholder": "Search..."
+    }
+  }
+}
