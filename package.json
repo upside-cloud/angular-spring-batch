@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "packagr": "cd projects/angular-spring-batch && ng-packagr -p ng-package.prod.json",
+    "packagr": "cd projects/angular-spring-batch && ng-packagr -p ng-package.prod.json --config tsconfig.lib.json",
     "npm:install": "npm install",
     "npm:outdated": "npm outdated"
   },
