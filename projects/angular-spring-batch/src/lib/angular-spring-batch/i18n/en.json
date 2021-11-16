@@ -1,0 +1,78 @@
+{
+  "angularSpringBatch": {
+    "main": {
+      "jobs": "Jobs",
+      "currentSearchPlaceholder": "Search..."
+    },
+    "list": {
+      "loadingMessage": "Loading jobs...",
+      "loadErrorMessage": "Error while loading jobs!"
+    },
+    "executionForm": {
+      "executeJob": "Execute job",
+      "invalidParameter": "{{name}} is invalid.",
+      "execute": "Execute"
+    },
+    "executions": {
+      "executionsList": "Execution list",
+      "refresh": "Refresh",
+      "loadErrorMessage": "Error while loading executions!",
+      "loadingMessage": "Loading executions...",
+      "noExecution":  "No Execution",
+      "creationDate": "Creation date",
+      "startDate": "Start date",
+      "endDate": "End date",
+      "duration": "Duration",
+      "exitCode": "Exit code",
+      "stopButtonTitle": "Stop",
+      "logsButtonTitle":  "Logs",
+      "detailsButtonTitle": "Execution details",
+      "paginationHeader": "Showing {{start}} - {{end}} of {{total}} items.",
+      "paginationFirstPage": "First page",
+      "paginationPreviousPage": "Previous",
+      "paginationNextPage": "Next",
+      "paginationLastPage": "Last page"
+    },
+    "executionFilters": {
+      "allStates": "All states",
+
+      "fromDate": "From:",
+      "toDate": "To:"
+    },
+    "executionDetailsModal": {
+      "title": "Details of the execution of job <br> <em>{{jobName}}</em>",
+      "refreshButtonTitle": "Refresh",
+      "parameters": "Parameters",
+      "steps": "Steps",
+      "loadErrorMessage": "Error while loading steps!",
+      "loadingMessage": "Loading steps...",
+      "noStep": "No steps",
+      "close": "Close"
+    },
+    "executionStep": {
+      "start": "Start:",
+      "end": "End:",
+      "duration": "Duration:",
+      "exitCode": "Exit code:",
+      "exitMessage": "Exit message:",
+      "commitCount": "Commits:",
+      "writeCount": "Writes:",
+      "writeSkipCount": "Skipped writes:",
+      "readCount": "Reads:",
+      "readSkipCount": "Skipped reads:",
+      "filterCount": "Filters:",
+      "rollbackCount": "Rollbacks:",
+      "processSkipCount": "Skipped processes:"
+    },
+    "ExecutionStatus": {
+      "ABANDONED": "Abandoned",
+      "COMPLETED": "Terminated",
+      "FAILED": "Failed",
+      "STARTED": "Started",
+      "STARTING": "Starting",
+      "STOPPED": "Stopped",
+      "STOPPING": "Stopping",
+      "UNKNOWN": "Unknown"
+    }
+  }
+}

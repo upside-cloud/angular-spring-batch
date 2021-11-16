@@ -59,9 +59,4 @@ export class SpringBatchExecutionStep {
     }
     return null;
   }
-
-  get logsUrl() {
-    return `/management/jobs/stepexecutions/${this.id}/logs`;
-  }
-
 }
