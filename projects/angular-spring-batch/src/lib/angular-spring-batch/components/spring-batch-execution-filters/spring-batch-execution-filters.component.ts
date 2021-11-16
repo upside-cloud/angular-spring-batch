@@ -3,6 +3,7 @@ import {createAutoCorrectedDatePipe} from 'text-mask-addons';
 import {moment} from '../../misc/spring-batch-moment';
 import {SpringBatchExecutionFilters} from '../../models/spring-batch-execution-filters.model';
 import {SpringBatchExecutionStatus} from '../../models/spring-batch-execution-status.model';
+import {SpringBatchExecutionFiltersComponentT9n} from './spring-batch-execution-filters.component.t9n';
 
 @Component({
   selector: 'spring-batch-execution-filters',
@@ -10,6 +11,8 @@ import {SpringBatchExecutionStatus} from '../../models/spring-batch-execution-st
   templateUrl: './spring-batch-execution-filters.component.html',
 })
 export class SpringBatchExecutionFiltersComponent {
+
+  readonly t9n = new SpringBatchExecutionFiltersComponentT9n();
 
   private _filters: SpringBatchExecutionFilters;
 

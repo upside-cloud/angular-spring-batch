@@ -5,6 +5,7 @@ import {SpringBatchExecutionParameter} from '../../models/spring-batch-execution
 import {SpringBatchExecution} from '../../models/spring-batch-execution.model';
 import {SpringBatch} from '../../models/spring-batch.model';
 import {SpringBatchService} from '../../services/spring-batch.service';
+import {SpringBatchExecutionFormComponentT9n} from './spring-batch-execution-form.component.t9n';
 
 @Component({
   selector: 'spring-batch-execution-form',
@@ -12,6 +13,8 @@ import {SpringBatchService} from '../../services/spring-batch.service';
   templateUrl: './spring-batch-execution-form.component.html',
 })
 export class SpringBatchExecutionFormComponent {
+
+  readonly t9n = new SpringBatchExecutionFormComponentT9n();
 
   private _job: SpringBatch;
 

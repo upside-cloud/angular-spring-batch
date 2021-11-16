@@ -1,6 +1,6 @@
 <div *ngIf="job" class="p-3 h-100">
   <div class="border-bottom d-flex justify-content-between">
-    <h4 [title]="job.lastExecutionStatus.label">
+    <h4 [title]="t9n.byStatus(job.lastExecutionStatus) | translate">
       <fa-icon [fixedWidth]="true" [icon]="job.lastExecutionStatus.icon" [ngClass]="'text-' + job.lastExecutionStatus.color"></fa-icon>
       {{job.name}}
     </h4>

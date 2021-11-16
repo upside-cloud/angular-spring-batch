@@ -1,6 +1,6 @@
 <div class="bg-light border rounded p-2">
   <h5 class="d-flex justify-content-between mb-3">
-    <span [title]="step.status.label">
+    <span [title]="t9n.byStatus(step.status) | translate">
       <fa-icon [fixedWidth]="true" [icon]="step.status.icon" [ngClass]="'text-' + step.status.color"></fa-icon>
       {{step.name}}
     </span>
@@ -13,75 +13,77 @@
   <div class="metadata px-2">
     <div class="row">
       <div class="col-4 text-truncate" [title]="step.startTime | date:'dd/MM/yy HH:mm:ss'">
-        <strong>Début :</strong>
+        <strong [translate]="t9n.start">Début :</strong>
         {{step.startTime | date:'dd/MM/yy HH:mm:ss'}}
       </div>
 
       <div class="col-4 text-truncate" [title]="step.endTime | date:'dd/MM/yy HH:mm:ss'">
-        <strong>Fin :</strong>
+        <strong [translate]="t9n.end">Fin :</strong>
         {{step.endTime | date:'dd/MM/yy HH:mm:ss'}}
       </div>
 
       <div class="col-4 text-truncate" [title]="step.duration | springBatchDuration">
-        <strong>Durée :</strong>
+        <strong [translate]="t9n.duration">Durée :</strong>
         {{step.duration | springBatchDuration}}
       </div>
     </div>
 
-    <div class="row">
+    <div class="row mt-2">
       <div class="col-4 text-truncate" [title]="step.exitCode">
-        <strong>Code de sortie :</strong>
+        <strong [translate]="t9n.exitCode">Code de sortie :</strong>
         {{step.exitCode}}
       </div>
 
-      <div class="col-4 text-truncate" [title]="step.exitMessage">
-        <strong>Message :</strong>
-        {{step.exitMessage}}
+      <div class="col-8 text-truncate" [title]="step.exitMessage">
+        <div class="float-left mr-1"><strong [translate]="t9n.exitMessage">Message :</strong></div>
+        <span *ngIf="step.exitMessage.length === 0">-</span>
+        <span *ngIf="!step.exitMessage.includes('\n')">{{step.exitMessage}}</span>
+        <pre *ngIf="step.exitMessage.includes('\n')">{{step.exitMessage ? step.exitMessage : '-'}}</pre>
       </div>
     </div>
 
-    <div class="row">
+    <div class="row mt-2">
       <div class="col-4 text-truncate" [title]="step.commitCount">
-        <strong>Commits :</strong>
+        <strong [translate]="t9n.commitCount">Commits :</strong>
         {{step.commitCount}}
       </div>
 
       <div class="col-4 text-truncate" [title]="step.writeCount">
-        <strong>Écritures :</strong>
+        <strong [translate]="t9n.writeCount">Écritures :</strong>
         {{step.writeCount}}
       </div>
 
       <div class="col-4 text-truncate" [title]="step.writeSkipCount">
-        <strong>Écritures évitées :</strong>
+        <strong [translate]="t9n.writeSkipCount">Écritures évitées :</strong>
         {{step.writeSkipCount}}
       </div>
     </div>
 
     <div class="row">
       <div class="col-4 text-truncate" [title]="step.readCount">
-        <strong>Lectures :</strong>
+        <strong [translate]="t9n.readCount">Lectures :</strong>
         {{step.readCount}}
       </div>
 
       <div class="col-4 text-truncate" [title]="step.readSkipCount">
-        <strong>Lectures évitées :</strong>
+        <strong [translate]="t9n.readSkipCount">Lectures évitées :</strong>
         {{step.readSkipCount}}
       </div>
 
       <div class="col-4 text-truncate" [title]="step.filterCount">
-        <strong>Filtres :</strong>
+        <strong [translate]="t9n.filterCount">Filtres :</strong>
         {{step.filterCount}}
       </div>
     </div>
 
     <div class="row">
       <div class="col-4 text-truncate" [title]="step.rollbackCount">
-        <strong>Rollbacks :</strong>
+        <strong [translate]="t9n.rollbackCount">Rollbacks :</strong>
         {{step.rollbackCount}}
       </div>
 
       <div class="col-4 text-truncate" [title]="step.processSkipCount">
-        <strong>Processus évitées :</strong>
+        <strong [translate]="t9n.processSkipCount">Processus évitées :</strong>
         {{step.processSkipCount}}
       </div>
     </div>

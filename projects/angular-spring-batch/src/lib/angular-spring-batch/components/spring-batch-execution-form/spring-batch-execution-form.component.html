@@ -1,7 +1,7 @@
 <h6 class="m-0">
   <button type="button" (click)="toggle()">
-    <fa-icon [fixedWidth]="true" [icon]="visible ? 'chevron-down' : 'chevron-right'"></fa-icon>
-    Executer le job
+    <fa-icon [fixedWidth]="true" [icon]="visible ? 'chevron-down' : 'chevron-right'" class="mr-1"></fa-icon>
+    {{t9n.executeJob | translate}}
   </button>
 </h6>
 
@@ -12,8 +12,8 @@
         <label [for]="'job-parameter-' + parameter.name ">{{parameter.name}}</label>
         <input class="form-control" placeholder="jj/mm/aaaa HH:MM:SS" type="text" [id]="'job-parameter-' + parameter.name" [name]="parameter.name" [(ngModel)]="parameter.inputValue" [textMask]="dateTextMask"
         />
-        <div *ngIf="parameter.invalid" class="invalid-feedback">
-          {{parameter.name}} est invalide.
+        <div *ngIf="parameter.invalid" class="invalid-feedback"
+             [innerHTML]="t9n.invalidParameter | translate: {name: parameter.name}">
         </div>
       </div>
 
@@ -21,8 +21,8 @@
         <label [for]="'job-parameter-' + parameter.name ">{{parameter.name}}</label>
         <input class="form-control" type="text" [id]="'job-parameter-' + parameter.name" [name]="parameter.name" [ngClass]="{ 'ng-invalid': parameter.invalid, 'ng-valid': parameter.valid }"
           [(ngModel)]="parameter.inputValue" />
-        <div *ngIf="parameter.invalid" class="invalid-feedback">
-          {{parameter.name}} est invalide.
+        <div *ngIf="parameter.invalid" class="invalid-feedback"
+          [innerHTML]="t9n.invalidParameter | translate: {name: parameter.name}">
         </div>
       </div>
 
@@ -30,8 +30,8 @@
         <label [for]="'job-parameter-' + parameter.name ">{{parameter.name}}</label>
         <input class="form-control" maxlength="18" type="text" [id]="'job-parameter-' + parameter.name" [name]="parameter.name" [ngClass]="{ 'ng-invalid': parameter.invalid, 'ng-valid': parameter.valid }"
           [(ngModel)]="parameter.inputValue" />
-        <div *ngIf="parameter.invalid" class="invalid-feedback">
-          {{parameter.name}} est invalide.
+        <div *ngIf="parameter.invalid" class="invalid-feedback"
+             [innerHTML]="t9n.invalidParameter | translate: {name: parameter.name}">
         </div>
       </div>
 
@@ -50,8 +50,8 @@
 
   <div class="text-right">
     <button class="btn btn-primary" type="submit" [disabled]="disabled">
-      <fa-icon [fixedWidth]="true" icon="play-circle"></fa-icon>
-      Exécuter
+      <fa-icon [fixedWidth]="true" icon="play-circle" class="mr-1"></fa-icon>
+      {{t9n.execute | translate}}
     </button>
   </div>
 </form>
