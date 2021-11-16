@@ -1,6 +1,7 @@
 // @dynamic
 import {IconProp} from '@fortawesome/fontawesome-svg-core';
 
+// @dynamic
 export class SpringBatchExecutionStatus {
 
   static readonly values: SpringBatchExecutionStatus[] = [];
