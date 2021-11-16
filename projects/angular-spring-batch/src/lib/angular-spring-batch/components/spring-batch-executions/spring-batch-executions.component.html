@@ -26,7 +26,7 @@
     [loadingMessage]="t9n.loadingMessage | translate">
   </spring-batch-loading-indicator-message>
 
-  <div *ngIf="!loading && !loadError && executions.length === 0" class="lead my-5 text-center text-secondary"
+  <div *ngIf="!loading && !loadError && executions.length === 0" class="lead my-5 text-center text-primary"
        [translate]="t9n.noExecution">
     Aucune exécution
   </div>
@@ -62,10 +62,6 @@
                   [disabled]="!execution.stoppable">
             <fa-icon [fixedWidth]="true" icon="stop"></fa-icon>
           </button>
-          <a class="btn btn-primary ml-1" href="{{execution.logsUrl}}" target="_blank"
-             [title]="t9n.logsButtonTitle | translate">
-            <fa-icon [fixedWidth]="true" icon="tasks"></fa-icon>
-          </a>
           <button class="btn btn-info ml-1" type="button"
                   [title]="t9n.detailsButtonTitle | translate"
                   (click)="onClickExecutionDetails(execution)">

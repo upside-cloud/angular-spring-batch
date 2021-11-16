@@ -39,7 +39,7 @@
           [loading]="loading"
           [loadingMessage]="t9n.loadingMessage | translate">
         </spring-batch-loading-indicator-message>
-        <p *ngIf="!loading && !loadError && steps.length === 0" class="lead text-center text-secondary"
+        <p *ngIf="!loading && !loadError && steps.length === 0" class="lead text-center text-primary"
           [translate]="t9n.noStep">
           Aucune étape
         </p>

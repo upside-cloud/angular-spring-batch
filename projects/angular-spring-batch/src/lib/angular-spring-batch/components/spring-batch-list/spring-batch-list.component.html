@@ -4,7 +4,7 @@
     <div class="align-items-center d-flex justify-content-between">
       <div class="mr-1 text-truncate">
         <div>{{job.name}}</div>
-        <small [ngClass]="{ 'text-secondary': selected !== job }">{{job.description}}</small>
+        <small [ngClass]="{ 'text-primary': selected !== job }">{{job.description}}</small>
       </div>
       <fa-icon class="ml-2" [fixedWidth]="true" [icon]="job.lastExecutionStatus.icon"
                [ngClass]="(selected === job) ? '' : 'text-' + job.lastExecutionStatus.color"></fa-icon>
@@ -12,7 +12,7 @@
   </a>
 
   <div *ngIf="!loading && !loadError && jobs.length === 0"
-       class="align-items-center d-flex h-100 justify-content-center lead mx-2 text-secondary">Aucun job
+       class="align-items-center d-flex h-100 justify-content-center lead mx-2 text-primary">Aucun job
   </div>
 
   <spring-batch-loading-indicator-message
