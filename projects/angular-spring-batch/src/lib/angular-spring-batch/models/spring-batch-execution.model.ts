@@ -42,10 +42,6 @@ export class SpringBatchExecution {
     return null;
   }
 
-  get logsUrl() {
-    return `/management/jobs/executions/${this.id}/logs`;
-  }
-
   get stoppable() {
     return [SpringBatchExecutionStatus.STARTED, SpringBatchExecutionStatus.STARTING].indexOf(this.status) >= 0;
   }

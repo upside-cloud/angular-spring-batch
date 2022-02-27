@@ -11,12 +11,14 @@
 
 # dependencies
 /node_modules
+node_modules
 
 ## GRADLE
 .gradle/
 
 # IDEs and editors
 /.idea
+.idea
 .project
 .classpath
 .c9/

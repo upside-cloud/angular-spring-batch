@@ -1,8 +1,9 @@
-import { Component, Input, ViewChild } from '@angular/core';
-import { SpringBatchExecution } from '../../models/spring-batch-execution.model';
-import { SpringBatch } from '../../models/spring-batch.model';
-import { SpringBatchDetailsComponent } from '../spring-batch-details/spring-batch-details.component';
-import { SpringBatchListComponent } from '../spring-batch-list/spring-batch-list.component';
+import {Component, ViewChild} from '@angular/core';
+import {SpringBatchExecution} from '../../models/spring-batch-execution.model';
+import {SpringBatch} from '../../models/spring-batch.model';
+import {SpringBatchDetailsComponent} from '../spring-batch-details/spring-batch-details.component';
+import {SpringBatchListComponent} from '../spring-batch-list/spring-batch-list.component';
+import {SpringBatchComponentT9n} from './spring-batch.component.t9n';
 
 @Component({
   selector: 'spring-batch',
@@ -10,6 +11,8 @@ import { SpringBatchListComponent } from '../spring-batch-list/spring-batch-list
   templateUrl: './spring-batch.component.html',
 })
 export class SpringBatchComponent {
+
+  readonly t9n = new SpringBatchComponentT9n();
 
   job: SpringBatch;
 

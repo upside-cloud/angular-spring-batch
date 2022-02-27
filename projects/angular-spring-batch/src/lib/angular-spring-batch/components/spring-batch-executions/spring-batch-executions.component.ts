@@ -1,12 +1,24 @@
-import { DOCUMENT } from '@angular/common';
-import { Component, ComponentFactoryResolver, ComponentRef, EventEmitter, Inject, Input, OnInit, Output, ViewChild, ViewContainerRef } from '@angular/core';
-import { throwError } from 'rxjs';
-import { catchError, finalize } from 'rxjs/operators';
-import { SpringBatchExecutionFilters } from '../../models/spring-batch-execution-filters.model';
-import { SpringBatchExecution } from '../../models/spring-batch-execution.model';
-import { SpringBatch } from '../../models/spring-batch.model';
-import { SpringBatchService } from '../../services/spring-batch.service';
-import { SpringBatchExecutionDetailsModalComponent } from '../spring-batch-execution-details-modal/spring-batch-execution-details-modal.component';
+import {DOCUMENT} from '@angular/common';
+import {
+  Component,
+  ComponentFactoryResolver,
+  ComponentRef,
+  EventEmitter,
+  Inject,
+  Input,
+  OnInit,
+  Output,
+  ViewChild,
+  ViewContainerRef
+} from '@angular/core';
+import {throwError} from 'rxjs';
+import {catchError, finalize} from 'rxjs/operators';
+import {SpringBatchExecutionFilters} from '../../models/spring-batch-execution-filters.model';
+import {SpringBatchExecution} from '../../models/spring-batch-execution.model';
+import {SpringBatch} from '../../models/spring-batch.model';
+import {SpringBatchService} from '../../services/spring-batch.service';
+import {SpringBatchExecutionDetailsModalComponent} from '../spring-batch-execution-details-modal/spring-batch-execution-details-modal.component';
+import {SpringBatchExecutionsComponentT9n} from './spring-batch-executions.component.t9n';
 
 @Component({
   selector: 'spring-batch-executions',
@@ -14,6 +26,8 @@ import { SpringBatchExecutionDetailsModalComponent } from '../spring-batch-execu
   templateUrl: './spring-batch-executions.component.html',
 })
 export class SpringBatchExecutionsComponent implements OnInit {
+
+  readonly t9n = new SpringBatchExecutionsComponentT9n();
 
   private _job: SpringBatch;
   private readonly maxPages = 11;
@@ -28,6 +42,7 @@ export class SpringBatchExecutionsComponent implements OnInit {
   loadError = false;
   loading = false;
   page = 0;
+  pageSize = 25;
 
   @Output()
   stop = new EventEmitter<SpringBatchExecution>();
@@ -64,7 +79,7 @@ export class SpringBatchExecutionsComponent implements OnInit {
     this.loadError = false;
     this.loading = true;
     this.page = page;
-    this.jobsService.findAllJobExecutions(this.job, this.filters, page).pipe(
+    this.jobsService.findAllJobExecutions(this.job, this.filters, page, this.pageSize).pipe(
       catchError((error) => {
         this.loadError = true;
         return throwError(error);
@@ -125,6 +140,22 @@ export class SpringBatchExecutionsComponent implements OnInit {
 
   toggle() {
     this.visible = !this.visible;
+  }
+
+  get paginationT9nValues(): { start: number, end: number, total: number } {
+    return {
+      start: this.paginationStart,
+      end: this.paginationEnd,
+      total: this.totalItems
+    };
+  }
+
+  get paginationStart(): number {
+    return this.page === 0 ? 1 : (this.page * this.pageSize + 1)
+  }
+
+  get paginationEnd(): number {
+    return this.page === 0 ? this.queryCount : (this.page * this.pageSize + this.queryCount)
   }
 
 }

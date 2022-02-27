@@ -1,25 +1,23 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {createAutoCorrectedDatePipe} from 'text-mask-addons';
-import {moment} from '../../misc/spring-batch-moment';
-import {SpringBatchExecutionFilters} from '../../models/spring-batch-execution-filters.model';
-import {SpringBatchExecutionStatus} from '../../models/spring-batch-execution-status.model';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { moment } from '../../misc/spring-batch-moment';
+import { SpringBatchExecutionFilters } from '../../models/spring-batch-execution-filters.model';
+import { SpringBatchExecutionStatus } from '../../models/spring-batch-execution-status.model';
+import { SpringBatchExecutionFiltersComponentT9n } from './spring-batch-execution-filters.component.t9n';
 
 @Component({
   selector: 'spring-batch-execution-filters',
   styleUrls: ['./spring-batch-execution-filters.component.scss'],
-  templateUrl: './spring-batch-execution-filters.component.html',
+  templateUrl: './spring-batch-execution-filters.component.html'
 })
 export class SpringBatchExecutionFiltersComponent {
+
+  readonly t9n = new SpringBatchExecutionFiltersComponentT9n();
 
   private _filters: SpringBatchExecutionFilters;
 
   beginDateInputValue: string;
 
-  readonly dateTextMask = {
-    keepCharPositions: true,
-    mask: [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, ':', /\d/, /\d/, ':', /\d/, /\d/],
-    pipe: createAutoCorrectedDatePipe('dd/mm/yyyy HH:MM:SS'),
-  };
+  readonly dateMask = 'd0/M0/0000';
 
   endDateInputValue: string;
 
@@ -40,11 +38,11 @@ export class SpringBatchExecutionFiltersComponent {
   }
 
   private dateInputValue(date: Date) {
-    return date ? moment(date).format('DD/MM/YYYY HH:mm:ss') : null;
+    return date ? moment(date).format('DD/MM/YYYY') : '';
   }
 
   private parseDate(value: string) {
-    const m = moment(value, 'DD/MM/YYYY HH:mm:ss', true);
+    const m = moment(value, 'DD/MM/YYYY', true);
     return m.isValid() ? m.toDate() : null;
   }
 

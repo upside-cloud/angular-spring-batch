@@ -1,0 +1,80 @@
+{
+  "angularSpringBatch": {
+    "main": {
+      "jobs": "Jobs",
+      "currentSearchPlaceholder": "Suchen..."
+    },
+    "list": {
+      "loadingMessage": "Lade Jobs...",
+      "loadErrorMessage": "Fehler beim Laden der Jobs!"
+    },
+    "executionForm": {
+      "executeJob": "Job Ausführen",
+      "invalidParameter": "<em>{{name}}</em> ist nicht gültig.",
+      "execute": "Ausführen",
+      "datePlaceholder": "DD/MM/YYYY"
+    },
+    "executions": {
+      "executionsList": "Ausführungsliste",
+      "refresh": "Aktualisieren",
+      "loadErrorMessage": "Fehler beim Laden der Ausführungen!",
+      "loadingMessage": "Laden der Ausführungen...",
+      "noExecution":  "Keine Ausführungen",
+      "creationDate": "Erstelldatum",
+      "startDate": "Startdatum",
+      "endDate": "Enddatum",
+      "duration": "Dauer",
+      "exitCode": "Exit-Code",
+      "stopButtonTitle": "Anhalten",
+      "logsButtonTitle":  "Logs",
+      "detailsButtonTitle": "Ausführungsdetails",
+      "paginationHeader": "Zeige {{start}} - {{end}} von {{total}} Einträgen.",
+      "paginationFirstPage": "Erste Seite",
+      "paginationPreviousPage": "Vorherige",
+      "paginationNextPage": "Nächste",
+      "paginationLastPage": "Letzte Seite"
+    },
+    "executionFilters": {
+      "allStates": "Alle Stati",
+
+      "fromDate": "Von:",
+      "toDate": "Bis:",
+      "datePlaceholder": "DD/MM/YYYY HH:MM:SS"
+    },
+    "executionDetailsModal": {
+      "title": "Details der Ausführung des Jobs <br> <em>{{jobName}}</em>",
+      "refreshButtonTitle": "Aktualisieren",
+      "parameters": "Parameter",
+      "steps": "Einzelschritte",
+      "loadErrorMessage": "Fehler beim Laden der Einzelschritte!",
+      "loadingMessage": "Laden der Einzelschritte...",
+      "noStep": "Keine Einzelschritte",
+      "close": "Schließen"
+    },
+    "executionStep": {
+      "start": "Start:",
+      "end": "Ende:",
+      "duration": "Dauer:",
+      "exitCode": "Exit-Code:",
+      "exitMessage": "Exit-Message:",
+      "commitCount": "Commits:",
+      "writeCount": "Schreibvorgänge:",
+      "writeSkipCount": "Übersprungene Schreibvorgänge:",
+      "readCount": "Lesevorgänge",
+      "readSkipCount": "Übersprungene Lesevorgänge:",
+      "filterCount": "Filter:",
+      "rollbackCount": "Rollbacks:",
+      "processSkipCount": "Übersprungene Prozesse:"
+    },
+    "ExecutionStatus": {
+      "ABANDONED": "Verwaist",
+      "COMPLETED": "Beendet",
+      "FAILED": "Gescheitert",
+      "STARTED": "Gestartet",
+      "STARTING": "Beim Starten",
+      "STOPPED": "Angehalten",
+      "STOPPING": "Beim Anhalten",
+      "UNKNOWN": "Unbekannt"
+    }
+  }
+}

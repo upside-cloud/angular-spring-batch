@@ -4,6 +4,7 @@ import { catchError, finalize } from 'rxjs/operators';
 import { SpringBatchExecutionStep } from '../../models/spring-batch-execution-step.model';
 import { SpringBatchExecution } from '../../models/spring-batch-execution.model';
 import { SpringBatchService } from '../../services/spring-batch.service';
+import {SpringBatchExecutionDetailsModalComponentT9n} from './spring-batch-execution-details-modal.component.t9n';
 
 @Component({
   selector: 'spring-batch-execution-details-modal',
@@ -14,6 +15,8 @@ export class SpringBatchExecutionDetailsModalComponent implements OnInit {
 
   @Input()
   execution: SpringBatchExecution;
+
+  readonly t9n = new SpringBatchExecutionDetailsModalComponentT9n();
 
   loadError = false;
   loading = false;

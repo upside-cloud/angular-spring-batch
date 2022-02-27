@@ -3,6 +3,7 @@ import { throwError as observableThrowError } from 'rxjs';
 import { catchError, finalize } from 'rxjs/operators';
 import { SpringBatch } from '../../models/spring-batch.model';
 import { SpringBatchService } from '../../services/spring-batch.service';
+import {SpringBatchListComponentT9n} from './spring-batch-list.component.t9n';
 
 @Component({
   selector: 'spring-batch-list',
@@ -10,6 +11,8 @@ import { SpringBatchService } from '../../services/spring-batch.service';
   templateUrl: './spring-batch-list.component.html',
 })
 export class SpringBatchListComponent implements OnInit {
+
+  readonly t9n = new SpringBatchListComponentT9n();
 
   jobs: SpringBatch[];
   loadError = false;
