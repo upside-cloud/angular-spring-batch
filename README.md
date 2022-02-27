@@ -1,3 +1,8 @@
+angular-spring-batch for angular@12
+
+---
+
+
 # Angular Spring Batch
 
 This lib makes a series of component availables to manage Spring Batch jobs form an Angular Front-End.

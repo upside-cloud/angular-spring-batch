@@ -10,13 +10,17 @@
 
   <div class="form-group mb-2 mr-2 no-wrap">
     <label for="spring-batch-execution-filters-begin-date" [translate]="t9n.fromDate">Date de début du :</label>
-    <input class="form-control ml-2" id="spring-batch-execution-filters-begin-date" name="beginDate" placeholder="jj/mm/aaaa HH:MM:SS" type="text" [ngModel]="beginDateInputValue" (ngModelChange)="onBeginDateChange($event)"
-      [textMask]="dateTextMask" />
+    <input id="spring-batch-execution-filters-begin-date" type="text" name="beginDate"
+           class="form-control ml-2" [placeholder]="t9n.datePlaceholder | translate"
+           [ngModel]="beginDateInputValue" (ngModelChange)="onBeginDateChange($event)"
+           [mask]="dateMask" [leadZeroDateTime]="true" />
   </div>
 
   <div class="form-group mb-2 mr-2 no-wrap">
     <label for="spring-batch-execution-filters-end-date" [translate]="t9n.toDate">au :</label>
-    <input class="form-control ml-2" id="spring-batch-execution-filters-end-date" name="endDate" placeholder="jj/mm/aaaa HH:MM:SS" type="text" [ngModel]="endDateInputValue" (ngModelChange)="onEndDateChange($event)"
-      [textMask]="dateTextMask" />
+    <input id="spring-batch-execution-filters-end-date" type="text" name="endDate"
+           class="form-control ml-2" [placeholder]="t9n.datePlaceholder | translate"
+           [ngModel]="endDateInputValue" (ngModelChange)="onEndDateChange($event)"
+           [mask]="dateMask" [leadZeroDateTime]="true" />
   </div>
 </form>
