@@ -37,7 +37,8 @@
       "allStates": "Tous les statuts",
 
       "fromDate": "Date de début du:",
-      "toDate": "au:"
+      "toDate": "au:",
+      "datePlaceholder": "jj/mm/aaaa HH:MM:SS"
     },
     "executionDetailsModal": {
       "title": "Détails de l'exécution du job «{{jobName}}»",

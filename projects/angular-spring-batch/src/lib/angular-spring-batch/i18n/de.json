@@ -37,7 +37,8 @@
       "allStates": "Alle Stati",
 
       "fromDate": "Von:",
-      "toDate": "Bis:"
+      "toDate": "Bis:",
+      "datePlaceholder": "DD/MM/YYYY HH:MM:SS"
     },
     "executionDetailsModal": {
       "title": "Details der Ausführung des Jobs <br> <em>{{jobName}}</em>",
