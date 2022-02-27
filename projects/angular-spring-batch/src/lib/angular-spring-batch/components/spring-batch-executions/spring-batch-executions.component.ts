@@ -42,7 +42,7 @@ export class SpringBatchExecutionsComponent implements OnInit {
   loadError = false;
   loading = false;
   page = 0;
-  pageSize = 5;
+  pageSize = 25;
 
   @Output()
   stop = new EventEmitter<SpringBatchExecution>();
@@ -79,7 +79,7 @@ export class SpringBatchExecutionsComponent implements OnInit {
     this.loadError = false;
     this.loading = true;
     this.page = page;
-    this.jobsService.findAllJobExecutions(this.job, this.filters, page).pipe(
+    this.jobsService.findAllJobExecutions(this.job, this.filters, page, this.pageSize).pipe(
       catchError((error) => {
         this.loadError = true;
         return throwError(error);

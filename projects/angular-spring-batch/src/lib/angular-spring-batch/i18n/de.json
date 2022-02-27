@@ -11,7 +11,8 @@
     "executionForm": {
       "executeJob": "Job Ausführen",
       "invalidParameter": "<em>{{name}}</em> ist nicht gültig.",
-      "execute": "Ausführen"
+      "execute": "Ausführen",
+      "datePlaceholder": "DD/MM/YYYY"
     },
     "executions": {
       "executionsList": "Ausführungsliste",
