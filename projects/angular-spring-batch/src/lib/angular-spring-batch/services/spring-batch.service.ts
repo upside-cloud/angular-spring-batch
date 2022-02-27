@@ -15,11 +15,11 @@ export class SpringBatchService {
   constructor(private httpClient: HttpClient) {
   }
 
-  findAllJobExecutions(job: SpringBatch, filters: SpringBatchExecutionFilters, page = 0): Observable<{ items: SpringBatchExecution[], page: number, totalPages: number, totalItems: number, queryCount: number  }> {
+  findAllJobExecutions(job: SpringBatch, filters: SpringBatchExecutionFilters, page = 0, pageSize = 5): Observable<{ items: SpringBatchExecution[], page: number, totalPages: number, totalItems: number, queryCount: number  }> {
     // Immutable since 5.0.0
     let params = new HttpParams();
     params = params.append('page', String(page))
-    .append('size', String(5))
+    .append('size', String(pageSize))
     .append('sort', 'createTime,desc');
     if (filters.beginDate) {
       params = params.append('executionBeginDate', moment(filters.beginDate).format('YYYY-MM-DDTHH:mm:ss'));

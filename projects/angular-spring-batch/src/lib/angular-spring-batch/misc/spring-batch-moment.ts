@@ -1,3 +1,4 @@
-import * as momentMini from 'moment-mini';
+import * as momentTimezone from 'moment-timezone';
 
-export const moment = momentMini;
+momentTimezone.tz.setDefault('Europe/Berlin');
+export const moment = momentTimezone;

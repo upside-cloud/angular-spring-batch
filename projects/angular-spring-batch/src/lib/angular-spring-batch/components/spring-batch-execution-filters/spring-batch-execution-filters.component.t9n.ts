@@ -12,4 +12,5 @@ export class SpringBatchExecutionFiltersComponentT9n {
 
   readonly fromDate = `angularSpringBatch.executionFilters.fromDate`;
   readonly toDate = `angularSpringBatch.executionFilters.toDate`;
+  readonly datePlaceholder = `angularSpringBatch.executionFilters.datePlaceholder`;
 }

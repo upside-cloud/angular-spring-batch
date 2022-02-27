@@ -1,16 +1,15 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {finalize} from 'rxjs/operators';
-import {createAutoCorrectedDatePipe} from 'text-mask-addons';
-import {SpringBatchExecutionParameter} from '../../models/spring-batch-execution-parameter.model';
-import {SpringBatchExecution} from '../../models/spring-batch-execution.model';
-import {SpringBatch} from '../../models/spring-batch.model';
-import {SpringBatchService} from '../../services/spring-batch.service';
-import {SpringBatchExecutionFormComponentT9n} from './spring-batch-execution-form.component.t9n';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { finalize } from 'rxjs/operators';
+import { SpringBatchExecutionParameter } from '../../models/spring-batch-execution-parameter.model';
+import { SpringBatchExecution } from '../../models/spring-batch-execution.model';
+import { SpringBatch } from '../../models/spring-batch.model';
+import { SpringBatchService } from '../../services/spring-batch.service';
+import { SpringBatchExecutionFormComponentT9n } from './spring-batch-execution-form.component.t9n';
 
 @Component({
   selector: 'spring-batch-execution-form',
   styleUrls: ['./spring-batch-execution-form.component.scss'],
-  templateUrl: './spring-batch-execution-form.component.html',
+  templateUrl: './spring-batch-execution-form.component.html'
 })
 export class SpringBatchExecutionFormComponent {
 
@@ -18,11 +17,7 @@ export class SpringBatchExecutionFormComponent {
 
   private _job: SpringBatch;
 
-  readonly dateTextMask = {
-    keepCharPositions: true,
-    mask: [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/, ' ', /\d/, /\d/, ':', /\d/, /\d/, ':', /\d/, /\d/],
-    pipe: createAutoCorrectedDatePipe('dd/mm/yyyy HH:MM:SS'),
-  };
+  readonly dateTimeMask = 'd0/M0/0000 Hh:m0:s0';
 
   execution = new SpringBatchExecution();
   loading = false;

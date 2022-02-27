@@ -8,9 +8,6 @@
     "@fortawesome/angular-fontawesome",
     "@fortawesome/fontawesome-svg-core",
     "@fortawesome/free-solid-svg-icons",
-    "angular2-text-mask",
-    "text-mask-addons",
-    "class-transformer",
-    "moment-mini"
+    "class-transformer"
   ]
 }

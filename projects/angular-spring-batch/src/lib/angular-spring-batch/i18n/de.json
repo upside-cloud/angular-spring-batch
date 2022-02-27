@@ -11,7 +11,8 @@
     "executionForm": {
       "executeJob": "Job Ausführen",
       "invalidParameter": "<em>{{name}}</em> ist nicht gültig.",
-      "execute": "Ausführen"
+      "execute": "Ausführen",
+      "datePlaceholder": "DD/MM/YYYY"
     },
     "executions": {
       "executionsList": "Ausführungsliste",
@@ -37,7 +38,8 @@
       "allStates": "Alle Stati",
 
       "fromDate": "Von:",
-      "toDate": "Bis:"
+      "toDate": "Bis:",
+      "datePlaceholder": "DD/MM/YYYY HH:MM:SS"
     },
     "executionDetailsModal": {
       "title": "Details der Ausführung des Jobs <br> <em>{{jobName}}</em>",

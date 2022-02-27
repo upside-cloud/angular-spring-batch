@@ -11,7 +11,8 @@
     "executionForm": {
       "executeJob": "Execute job",
       "invalidParameter": "{{name}} is invalid.",
-      "execute": "Execute"
+      "execute": "Execute",
+      "datePlaceholder": "jj/mm/aaaa"
     },
     "executions": {
       "executionsList": "Execution list",
@@ -37,7 +38,8 @@
       "allStates": "All states",
 
       "fromDate": "From:",
-      "toDate": "To:"
+      "toDate": "To:",
+      "datePlaceholder": "DD/MM/YYYY HH:MM:SS"
     },
     "executionDetailsModal": {
       "title": "Details of the execution of job <br> <em>{{jobName}}</em>",
