@@ -1,4 +1,4 @@
-angular-spring-batch for angular@12
+angular-spring-batch for angular@13
 
 ---
 
