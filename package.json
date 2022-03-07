@@ -1,6 +1,6 @@
 {
   "name": "@upside-cloud/angular-spring-batch",
-  "version": "4.12.1",
+  "version": "4.12.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --proxy-config proxy.conf.json",
